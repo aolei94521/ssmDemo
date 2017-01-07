@@ -18,15 +18,8 @@ import com.aolei.ssm.service.TagDaoService;
 @ContextConfiguration(locations={"classpath:spring-mybatis.xml"})
 public class TestCode {
 	private static Logger logger = LoggerFactory.getLogger(TestCode.class);
-	//private ApplicationContext ac = null;
 	@Resource
 	private TagDaoService tagDaoService = null;
-	
-	/*@Before
-	public void before(){
-		ac = new ClassPathXmlApplicationContext("appp")
-	}*/
-	
 	@Test
 	public void test1(){
 		Tag tag = tagDaoService.getTagById(1);
