@@ -15,7 +15,7 @@ public class TagDaoServiceImpl implements TagDaoService{
 	@Override
 	public Tag getTagById(int id) {
 		// TODO Auto-generated method stub
-		return tagDao.selectByPrimaryKey(id);
+		return tagDao.selectById(id);
 	}
 
 }

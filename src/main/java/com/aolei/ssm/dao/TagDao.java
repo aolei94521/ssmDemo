@@ -1,5 +1,7 @@
 package com.aolei.ssm.dao;
 
+import org.apache.ibatis.annotations.Select;
+
 import com.aolei.ssm.entity.Tag;
 
 public interface TagDao {
@@ -24,4 +26,7 @@ public interface TagDao {
     int updateByPrimaryKeySelective(Tag record);
 
     int updateByPrimaryKey(Tag record);
+    
+    @Select("select * from tb_tag where tagId = #{tagId}")
+    Tag selectById(Integer tagId);
 }
