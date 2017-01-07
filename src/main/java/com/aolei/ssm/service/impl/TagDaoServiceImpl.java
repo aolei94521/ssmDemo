@@ -12,10 +12,11 @@ import com.aolei.ssm.service.TagDaoService;
 public class TagDaoServiceImpl implements TagDaoService{
 	@Resource
 	private TagDao tagDao;
-	@Override
+
 	public Tag getTagById(int id) {
 		// TODO Auto-generated method stub
 		return tagDao.selectById(id);
 	}
+	
 
 }

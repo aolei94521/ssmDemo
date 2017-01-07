@@ -5,17 +5,19 @@ package com.aolei.ssm.entity;
 import java.sql.Date;
 
 public class Tag {
-	private int TagId;
+	private int tagId;
 	private String tag;
 	private int parentTagId;
 	private Date createTime;
 	private int level;
 	
+	
+	
 	public int getTagId() {
-		return TagId;
+		return tagId;
 	}
 	public void setTagId(int tagId) {
-		TagId = tagId;
+		this.tagId = tagId;
 	}
 	public String getTag() {
 		return tag;
@@ -42,23 +44,22 @@ public class Tag {
 		this.level = level;
 	}
 	
-	public Tag(int tagId, String tag, int parentTagId, Date createTime, int level) {
-		super();
-		TagId = tagId;
-		this.tag = tag;
-		this.parentTagId = parentTagId;
-		this.createTime = createTime;
-		this.level = level;
-	}
-	
 	public Tag() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 	
+	public Tag(int tagId, String tag, int parentTagId, Date createTime, int level) {
+		super();
+		this.tagId = tagId;
+		this.tag = tag;
+		this.parentTagId = parentTagId;
+		this.createTime = createTime;
+		this.level = level;
+	}
 	@Override
 	public String toString() {
-		return "TagDao [TagId=" + TagId + ", tag=" + tag + ", parentTagId=" + parentTagId + ", createTime=" + createTime
+		return "TagDao [TagId=" + tagId + ", tag=" + tag + ", parentTagId=" + parentTagId + ", createTime=" + createTime
 				+ ", level=" + level + "]";
 	}
 	
